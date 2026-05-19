@@ -1,16 +1,1 @@
 
-body {
-	background-color: papayawhip;
-}
-
-img {
-	width: 400px;
-	border: #4380B1, dotted;
-}
-
-h2 {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	text-decoration-line: underline;
-	text-transform: uppercase;
-	text-decoration-style: double;
-}
