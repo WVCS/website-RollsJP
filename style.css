@@ -1,56 +1,53 @@
-/* General Reset & Layout */
+/* Discord Light Mode Variables & Reset */
 body {
-	background-color: #191B1D; /* Roblox dark theme background */
-	color: #FFFFFF;
-	font-family: "HBRoman", "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color: #FFFFFF; /* Discord light mode main chat background */
+	color: #2E3338; /* Discord dark charcoal text */
+	font-family: "gg sans", "Segoe UI", Tahoma, sans-serif;
 	margin: 0;
 	padding: 0;
 }
 
-/* Roblox Navigation Bar */
-.roblox-nav {
-	background-color: #232527; /* Roblox header color */
+/* Discord Light Mode Header */
+.discord-nav {
+	background-color: #F2F3F5; /* Discord light mode sidebar/header gray */
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 40px;
-	padding: 0 20px;
+	height: 48px;
+	padding: 0 16px;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	box-sizing: border-box;
-	border-bottom: 1px solid #393B3D;
+	border-bottom: 1px solid #E3E5E8; /* Subtle separator line */
 	z-index: 1000;
 }
 
 .nav-left {
 	display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: 8px;
 }
 
-.menu-icon {
-	color: #FFFFFF;
+.discord-icon {
 	font-size: 18px;
-	cursor: pointer;
 }
 
-.roblox-logo a {
-	color: #FFFFFF;
+.brand-name {
 	font-weight: 700;
-	text-decoration: none;
-	letter-spacing: 1px;
-	font-size: 16px;
+	color: #060607;
+	font-size: 15px;
+	margin-right: 15px;
 }
 
-/* Nav Links Styling */
+/* Navigation Links Styled like Discord Channels/Tabs */
 .nav-links {
 	list-style: none;
 	display: flex;
+	gap: 8px;
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 .nav-links li {
@@ -59,74 +56,70 @@ body {
 }
 
 .nav-links a {
-	color: #C8C9C9;
+	color: #4E5058; /* Muted channel text color */
 	text-decoration: none;
 	font-size: 14px;
-	font-weight: 500;
-	padding: 0 16px;
-	height: 100%;
-	display: flex;
-	align-items: center;
-	transition: background-color 0.15s ease, color 0.15s ease;
+	font-weight: 600;
+	padding: 6px 12px;
+	border-radius: 4px;
+	transition: background-color 0.1s ease, color 0.1s ease;
 }
 
-/* Hover & Active states like Roblox */
+/* Hover State - Becomes slightly darker gray */
 .nav-links a:hover {
-	background-color: #393B3D;
-	color: #FFFFFF;
+	background-color: #E3E5E8;
+	color: #060607;
 }
 
+/* Active State - Uses Discord's signature "Blurple" color */
 .nav-links a.active {
-	border-bottom: 3px solid #FFFFFF;
+	background-color: #5865F2; /* Discord Blurple */
 	color: #FFFFFF;
-	padding-top: 3px; /* Balances out the border-bottom */
 }
 
-/* Fake Search Bar to fill space beautifully */
+/* Discord Style Search Input Box */
 .search-bar {
-	background-color: #111214;
-	border: 1px solid #393B3D;
-	color: #855;
-	padding: 4px 10px;
-	border-radius: 3px;
+	background-color: #E3E5E8;
+	color: #747F8D;
+	padding: 4px 8px;
+	border-radius: 4px;
 	font-size: 13px;
-	width: 150px;
-	color: #656667;
+	width: 140px;
+	text-align: left;
 }
 
-/* Main Content Centering (Replaces <center>) */
+/* Layout Content Areas */
 .main-content {
-	margin-top: 80px; /* Gives room for the fixed top nav */
+	margin-top: 88px; /* Room for the fixed header */
 	text-align: center;
 	padding: 20px;
 }
 
 h2 {
-	text-transform: uppercase;
-	margin-bottom: 20px;
-	letter-spacing: 1px;
+	color: #060607;
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 24px;
 }
 
 img {
 	width: 400px;
-	border: 3px solid #393B3D;
-	border-radius: 8px; /* Slightly rounded edges for a modern gaming UI look */
+	border: 1px solid #E3E5E8;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Layout specifically for the projects page embeds */
-.project-container h2 {
-	color: #FFFFFF;
-	margin-bottom: 30px;
-}
-
+/* Layout for the projects page embeds */
 .iframe-flex {
 	display: flex;
 	justify-content: center;
-	gap: 30px; /* Puts clean spacing between your two apps */
-	flex-wrap: wrap; /* Allows them to stack nicely on smaller screens */
+	gap: 24px;
+	flex-wrap: wrap;
+	margin-top: 20px;
 }
 
 iframe {
-	border-radius: 8px; /* Optional: rounds the corners of your apps to match the Roblox theme */
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle dark shadow behind your projects */
+	border-radius: 8px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+	background-color: #F2F3F5;
 }
